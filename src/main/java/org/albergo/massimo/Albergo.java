@@ -24,7 +24,7 @@ public class Albergo {
             List<Camera> camereDisponibili = this.assegnazione.verificaDisponibilità(richiesta , registro);
 
             if(camereDisponibili.size() == richiesta.getCamere().size()){
-                Alloggio alloggio = assegnazione.assegnaCamere(richiesta.getCliente(), camereDisponibili, registro.getCamere());
+                Alloggio alloggio = assegnazione.assegnaCamere(richiesta, camereDisponibili, registro.getCamere());
                 alloggi.add(alloggio);
             }
             else {
@@ -35,9 +35,9 @@ public class Albergo {
 
     public void stampaRegistro() {
         for (Alloggio alloggio : alloggi) {
-            System.out.println(alloggio.getCliente().getCognome());
+            System.out.println("I signori " + alloggio.getCliente().getCognome() + " alloggiano in: ");
             for (Camera camera : alloggio.getCamere()) {
-                System.out.println(camera.getIdCamera());
+                System.out.println("Camera: " + camera.getIdCamera());
             }
         }
     }
@@ -45,13 +45,15 @@ public class Albergo {
     public void checkOut(int giorno) {
         Iterator<Alloggio> alloggioIterator = alloggi.iterator();
         while( alloggioIterator.hasNext()) {
-            Alloggio alloggioAttuale=  alloggioIterator.next();
+            Alloggio alloggioAttuale = alloggioIterator.next();
             if( alloggioAttuale.getGiorni() == giorno) {
                 List<Camera> camere = alloggioAttuale.getCamere();
                 for(Camera camera : camere){
                     camera.setOccupata(false);
                 }
-              //  alloggioAttuale.getCamere().stream().map(Camera::occ);    guardare STREAM sul libro!!!
+
+                // Questa istruzione fa la stessa cosa del for precedente!
+                alloggioAttuale.getCamere().stream().forEach(e -> e.setOccupata(false));
 
                 alloggioIterator.remove();
             }

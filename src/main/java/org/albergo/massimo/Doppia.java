@@ -13,4 +13,9 @@ public class Doppia extends Camera {
         }
         return false;
     }
+
+    @Override
+    public String toString() {
+        return "Camera Doppia";
+    }
 }

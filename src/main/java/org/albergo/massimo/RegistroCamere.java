@@ -21,11 +21,15 @@ public class RegistroCamere {
         }
         int k = 0;
         for (Camera camera : camere) {
-
             camera.setIdCamera( ""+ ++k );
         }
 
-
+        System.out.println("------ Registro Camere ------");
+        for(Camera camera: camere) {
+            System.out.println(camera);
+        }
+        System.out.println("-----------------------------");
+        System.out.println();
     }
 
     public List<Camera> getCamere() {

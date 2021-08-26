@@ -13,4 +13,10 @@ public class Singola extends Camera {
         }
         return false;
     }
+
+
+    @Override
+    public String toString() {
+        return "Camera Singola";
+    }
 }
