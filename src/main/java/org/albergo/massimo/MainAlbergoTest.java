@@ -3,7 +3,7 @@ package org.albergo.massimo;
 import lombok.extern.slf4j.Slf4j;
 import org.albergo.massimo.exceptions.CamereNonDisponibiliException;
 import org.albergo.massimo.models.*;
-import org.albergo.massimo.services.Albergo;
+import org.albergo.massimo.services.AlbergoService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.List;
 @Slf4j
 public class MainAlbergoTest {
 
-    private Albergo albergo;
+    private AlbergoService albergo;
 
 
 

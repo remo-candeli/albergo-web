@@ -4,23 +4,27 @@ import lombok.extern.slf4j.Slf4j;
 import org.albergo.massimo.exceptions.CamereNonDisponibiliException;
 import org.albergo.massimo.models.Alloggio;
 import org.albergo.massimo.models.Camera;
-import org.albergo.massimo.models.RegistroCamere;
+import org.albergo.massimo.models.RegistroCamereService;
 import org.albergo.massimo.models.Richiesta;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 @Slf4j
-public class Albergo {
+@Service
+public class AlbergoService {
 
     private Assegnazione assegnazione;
-    private RegistroCamere registro;
+    private RegistroCamereService registro;
     private List<Alloggio> alloggi;
 
-    public Albergo() {
-        this.assegnazione = new Assegnazione();
-        this.registro = new RegistroCamere();
+    @Autowired
+    public AlbergoService() {
+        //this.assegnazione = new Assegnazione();
+        //this.registro = new RegistroCamereService();
         this.alloggi = new ArrayList<>();
     }
 
@@ -63,5 +67,15 @@ public class Albergo {
                 alloggioIterator.remove();
             }
         }
+    }
+
+    @Autowired
+    public void setAssegnazione(Assegnazione assegnazione) {
+        this.assegnazione = assegnazione;
+    }
+
+    @Autowired
+    public void setRegistro(RegistroCamereService registro) {
+        this.registro = registro;
     }
 }

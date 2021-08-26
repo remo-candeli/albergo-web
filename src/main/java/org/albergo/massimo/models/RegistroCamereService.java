@@ -6,11 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class RegistroCamere {
+public class RegistroCamereService {
 
     private List<Camera> camere;
 
-    public RegistroCamere() {
+    public RegistroCamereService() {
         int i = 0;
         camere = new ArrayList<>();
         for(i = 1 ; i <= 4; i++) {

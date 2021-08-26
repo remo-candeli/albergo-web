@@ -1,7 +1,5 @@
 package org.albergo.massimo.models;
 
-import org.albergo.massimo.models.Camera;
-import org.albergo.massimo.models.Cliente;
 
 import java.util.List;
 

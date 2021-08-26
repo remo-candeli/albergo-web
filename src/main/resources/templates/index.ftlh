@@ -4,13 +4,14 @@
     <title>Home page</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/reset.min.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/header-1.css" />
 </head>
 
 <body>
-    <a href="/registro/show">Stanze albergo</a>
-    <a href="checkin">Checkin Cliente</a>
-    <a href="checkout">Checkout Cliente</a>
-    <a href="lodge-ledger">Registro alloggi</a>
+    <#include "menu.ftlh">
+    <script src="/js/header-1.js"></script>
 </body>
 
 </html>

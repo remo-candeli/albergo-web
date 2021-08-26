@@ -1,9 +1,8 @@
 package org.albergo.massimo.controllers;
 
 import org.albergo.massimo.models.Camera;
-import org.albergo.massimo.models.RegistroCamere;
+import org.albergo.massimo.models.RegistroCamereService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +16,7 @@ import java.util.Map;
 @RequestMapping("/registro")
 public class RegistroAlbergoController {
 
-    private RegistroCamere registroCamere;
+    private RegistroCamereService registroCamere;
 
     @GetMapping("/show")
     public ModelAndView elencaRegistroAlbergo() {
@@ -28,7 +27,7 @@ public class RegistroAlbergoController {
     }
 
     @Autowired
-    public void setRegistroCamere(RegistroCamere registroCamere) {
+    public void setRegistroCamere(RegistroCamereService registroCamere) {
         this.registroCamere = registroCamere;
     }
 }

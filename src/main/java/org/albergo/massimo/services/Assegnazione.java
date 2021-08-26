@@ -3,16 +3,18 @@ package org.albergo.massimo.services;
 import lombok.extern.slf4j.Slf4j;
 import org.albergo.massimo.models.Alloggio;
 import org.albergo.massimo.models.Camera;
-import org.albergo.massimo.models.RegistroCamere;
+import org.albergo.massimo.models.RegistroCamereService;
 import org.albergo.massimo.models.Richiesta;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
+@Service
 public class Assegnazione {
 
-    public List<Camera> verificaDisponibilità(Richiesta richiesta, RegistroCamere registro) {
+    public List<Camera> verificaDisponibilità(Richiesta richiesta, RegistroCamereService registro) {
         List<Camera> result = new ArrayList<>();
 
         for(Camera cameraRichiesta : richiesta.getCamere()) {

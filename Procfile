@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -Dserver.port=$PORT -cp target/classes/:target/dependency/* org.albergo.massimo.MainSpringBootApp
+web: java $JAVA_OPTS -jar target/Heartbreak-Hotel-1.0.jar -Dserver.port=$PORT $JAR_OPTS
