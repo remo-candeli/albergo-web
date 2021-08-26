@@ -1,6 +1,10 @@
-package org.albergo.massimo;
+package org.albergo.massimo.services;
 
 import lombok.extern.slf4j.Slf4j;
+import org.albergo.massimo.models.Alloggio;
+import org.albergo.massimo.models.Camera;
+import org.albergo.massimo.models.RegistroCamere;
+import org.albergo.massimo.models.Richiesta;
 
 import java.util.ArrayList;
 import java.util.List;

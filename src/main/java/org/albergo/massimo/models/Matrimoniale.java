@@ -1,4 +1,4 @@
-package org.albergo.massimo;
+package org.albergo.massimo.models;
 
 public class Matrimoniale extends Camera {
 
@@ -7,7 +7,13 @@ public class Matrimoniale extends Camera {
 
     }
 
-   public boolean verificaCamera(Camera camera) {
+    @Override
+    public Integer getNrPostiLetto() {
+        return 2 + this.getNrLettiAggiuntivi();
+    }
+
+
+    public boolean verificaCamera(Camera camera) {
         if(this.getClass().equals(camera.getClass())) {
             if (this.getNrLettiAggiuntivi() == camera.getNrLettiAggiuntivi())
                 return true;

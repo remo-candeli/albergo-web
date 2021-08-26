@@ -1,4 +1,4 @@
-package org.albergo.massimo;
+package org.albergo.massimo.models;
 
 import lombok.Getter;
 import lombok.Setter;

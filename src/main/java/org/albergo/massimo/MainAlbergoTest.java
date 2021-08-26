@@ -1,26 +1,19 @@
 package org.albergo.massimo;
 
 import lombok.extern.slf4j.Slf4j;
+import org.albergo.massimo.exceptions.CamereNonDisponibiliException;
+import org.albergo.massimo.models.*;
+import org.albergo.massimo.services.Albergo;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
 @Slf4j
-public class MainAlbergo {
+public class MainAlbergoTest {
 
     private Albergo albergo;
 
-    public static void main(String[] args) {
-        MainAlbergo main = new MainAlbergo();
-        main.albergo = new Albergo();
-        main.creaRichiesteAlloggioClienti();
-
-        for(int i=1; i<6; i++) {
-            main.albergo.checkOut(i);
-            main.stampaRegistroAlbergo(i);
-        }
-    }
 
 
     private void creaRichiesteAlloggioClienti() {

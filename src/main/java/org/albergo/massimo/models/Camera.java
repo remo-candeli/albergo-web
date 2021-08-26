@@ -1,10 +1,10 @@
-package org.albergo.massimo;
+package org.albergo.massimo.models;
 
 import java.util.Objects;
 
 abstract public class Camera {
 
-    private String IdCamera;
+    private String idCamera;
     private boolean occupata = false;
     private int nrLettiSingoli = 0;
     private int nrLettiMatrimoniali = 0;
@@ -16,6 +16,7 @@ abstract public class Camera {
         this.nrLettiAggiuntivi = nrLettiAggiuntivi;
     }
 
+    abstract public Integer getNrPostiLetto();
     abstract public boolean verificaCamera(Camera camera);
 
     public int getNrLettiSingoli() {
@@ -35,7 +36,7 @@ abstract public class Camera {
     }
 
     public String getIdCamera() {
-        return IdCamera;
+        return idCamera;
     }
 
     public int getNrLettiAggiuntivi() {
@@ -43,7 +44,7 @@ abstract public class Camera {
     }
 
     public void setIdCamera(String idCamera) {
-        IdCamera = idCamera;
+        this.idCamera = idCamera;
     }
 
     @Override
@@ -51,11 +52,11 @@ abstract public class Camera {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Camera camera = (Camera) o;
-        return IdCamera.equals(camera.IdCamera);
+        return idCamera.equals(camera.idCamera);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(IdCamera);
+        return Objects.hash(idCamera);
     }
 }

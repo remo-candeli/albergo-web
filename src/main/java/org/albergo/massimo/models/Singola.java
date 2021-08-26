@@ -1,9 +1,14 @@
-package org.albergo.massimo;
+package org.albergo.massimo.models;
 
 public class Singola extends Camera {
 
     public Singola () {
         super(1, 0, 0);
+    }
+
+    @Override
+    public Integer getNrPostiLetto() {
+        return 1;
     }
 
     @Override
