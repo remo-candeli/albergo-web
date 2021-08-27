@@ -26,9 +26,8 @@ public class RegistroAlloggiController {
     public ModelAndView index() {
         List<AlloggioDto> alloggiDto = new ArrayList<>();
         List<Alloggio> alloggi = albergoService.getAlloggi();
-        List<Camera> camereAlloggi = Arrays.asList(new Matrimoniale(true), new Singola());
-        alloggi.add(new Alloggio(new Cliente("Candeli", "Remo", 4, 2),
-                    camereAlloggi, 5));
+        //List<Camera> camereAlloggi = Arrays.asList(new Matrimoniale(true), new Singola());
+        //alloggi.add(new Alloggio(new Cliente("Candeli", "Remo", 4, 2), camereAlloggi, 5));
         for(Alloggio alloggio: alloggi) {
             List<CameraDto> rooms = new ArrayList<>();
             for(Camera camera: alloggio.getCamere()) {
