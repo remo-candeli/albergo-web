@@ -31,6 +31,7 @@
                 </select>
                 <label for="figlie">Numero di figli:</label>
                 <select id="figli" name="figli">
+                    <option value="0">0 figlio</option>
                     <option value="1">1 figlio</option>
                     <option value="2">2 figlio</option>
                     <option value="3">3 figlio</option>
