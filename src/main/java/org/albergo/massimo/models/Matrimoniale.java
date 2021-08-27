@@ -24,6 +24,6 @@ public class Matrimoniale extends Camera {
 
     @Override
     public String toString() {
-        return "Matrimoniale con letti aggiuntivi " + this.getNrLettiAggiuntivi();
+        return "Matrimoniale" + (this.getNrLettiAggiuntivi()>0?" + "+this.getNrLettiAggiuntivi():"");
     }
 }

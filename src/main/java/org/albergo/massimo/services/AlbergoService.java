@@ -51,6 +51,10 @@ public class AlbergoService {
         }
     }
 
+    public List<Alloggio> getAlloggi() {
+        return alloggi;
+    }
+
     public void checkOut(int giorno) {
         Iterator<Alloggio> alloggioIterator = alloggi.iterator();
         while( alloggioIterator.hasNext()) {

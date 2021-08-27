@@ -10,7 +10,7 @@
                 <li class="nav__item"><a href="/registro/show">Stanze albergo</a></li>
                 <li class="nav__item"><a href="/checkin/">Checkin Cliente</a></li>
                 <li class="nav__item"><a href="checkout">Checkout Cliente</a></li>
-                <li class="nav__item"><a href="lodge-ledger">Registro alloggi</a></li>
+                <li class="nav__item"><a href="/alloggi/registro">Registro alloggi</a></li>
             </ul>
         </nav>
     </div>
